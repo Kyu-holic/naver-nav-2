@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.5em;
+  margin: 0;
+  background: linear-gradient(90deg, #dce35b, #45b649);
+  /* 만약 아래쪽으로 그라디언트를 주기 위해선 높이값 설정 */
+  /* background: linear-gradient(180deg, #dce35b, #45b649);
+     height: 100vh; */
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+.gnb {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.277);
+  padding-bottom: 9px;
+}
+
+.gnb a {
+  /* border: 1px solid red; */
+  display: inline-block;
+  height: 30px;
+  width: 80px;
+  line-height: 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.gnb a:before,
+.gnb a:after {
+  position: absolute;
+  /* data-link라는 속성이름을 가진 것을 그대로 가져온다 */
+  content: attr(data-link);
+  width: 100%;
+  transition: 0.3s;
+}
+
+.gnb a:before {
+  top: 0;
+  left: 0;
+}
+.gnb a:after {
+  top: 100%;
+  left: 0;
+  color: #45b659;
+}
+
+.gnb a:hover:before {
+  top: -100%;
+  left: 0;
+}
+.gnb a:hover:after {
+  top: 0;
+  left: 0;
+}
